@@ -1,44 +1,29 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
+import Cart from './pages/Cart';
+import Quote from './pages/Quote';
+import Account from './pages/Account';
 import './App.css';
-import Navbar from './Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <main className="hero" id="home">
-        <h1>Welcome to MyApp</h1>
-        <p>A simple React web app with a homepage and navigation bar.</p>
-        <a href="#about" className="cta-button">Get Started</a>
-      </main>
-
-      <section id="about" className="section">
-        <h2>About</h2>
-        <p>This is a starter React application. Customize it to fit your needs.</p>
-      </section>
-
-      <section id="services" className="section section-alt">
-        <h2>Services</h2>
-        <div className="cards">
-          <div className="card">
-            <h3>Feature One</h3>
-            <p>Description of your first feature or service.</p>
-          </div>
-          <div className="card">
-            <h3>Feature Two</h3>
-            <p>Description of your second feature or service.</p>
-          </div>
-          <div className="card">
-            <h3>Feature Three</h3>
-            <p>Description of your third feature or service.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="section">
-        <h2>Contact</h2>
-        <p>Get in touch at <a href="mailto:hello@example.com">hello@example.com</a></p>
-      </section>
-    </div>
+    <BrowserRouter>
+      <CartProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/quote" element={<Quote />} />
+          <Route path="/account" element={<Account />} />
+        </Routes>
+      </CartProvider>
+    </BrowserRouter>
   );
 }
 
