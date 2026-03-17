@@ -146,6 +146,56 @@
   line-height: 1.7;
 }
 
+.quote-cart-summary {
+  margin-top: 1.5rem;
+  border: 1px solid var(--border);
+  background: var(--white);
+}
+
+.quote-cart-label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.quote-cart-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.45rem 0.85rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.78rem;
+}
+
+.quote-cart-row:last-child { border-bottom: none; }
+
+.quote-cart-sku {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+}
+
+.quote-cart-name { flex: 1; color: var(--ink-light); }
+.quote-cart-qty  { color: var(--ink-muted); flex-shrink: 0; }
+
+.quote-cart-hint {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+.quote-cart-hint a { color: var(--gold); text-decoration: none; }
+.quote-cart-hint a:hover { text-decoration: underline; }
+
 @media (max-width: 768px) {
   .quote-layout { grid-template-columns: 1fr; gap: 2.5rem; }
   .form-row { grid-template-columns: 1fr; }

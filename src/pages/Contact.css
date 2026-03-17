@@ -1,0 +1,95 @@
+.contact-page { min-height: calc(100vh - 72px); }
+
+.contact-header {
+  padding: 3.5rem 0 2.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+}
+
+.contact-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.04em;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+  padding: 3.5rem 0 6rem;
+  align-items: start;
+}
+
+.contact-info { display: flex; flex-direction: column; gap: 1px; }
+
+.contact-card {
+  padding: 1.25rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+}
+
+.contact-card-icon {
+  display: block;
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.contact-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+}
+
+.contact-card p {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card a {
+  font-size: 0.78rem;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(184,154,110,0.35);
+  transition: border-color 0.2s;
+}
+
+.contact-card a:hover { border-color: var(--gold); }
+
+.contact-form-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+}
+
+.contact-form h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 1.75rem;
+}
+
+.contact-success {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+}

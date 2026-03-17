@@ -7,15 +7,28 @@
 }
 
 :root {
-  --cream: #faf8f5;
-  --white: #ffffff;
-  --ink: #1a1916;
-  --ink-light: #5a5751;
-  --ink-muted: #9a9690;
-  --gold: #b89a6e;
-  --gold-light: #d4b896;
-  --border: #e8e4de;
-  --surface: #f4f1ec;
+  --cream:        #faf8f5;
+  --white:        #ffffff;
+  --ink:          #1a1916;
+  --ink-light:    #5a5751;
+  --ink-muted:    #9a9690;
+
+  /* Gold — warmer and more saturated than before */
+  --gold:         #c4915a;
+  --gold-light:   #dba878;
+
+  /* Rose — new warm coral accent, used sparingly */
+  --rose:         #e4967a;
+  --rose-light:   #f5d5c8;
+
+  /* Blush — very soft warm background tint */
+  --blush:        #fdf1ec;
+
+  --border:       #ece8e3;
+  --surface:      #f5f1eb;
+
+  --purple:       #a07cc5;
+  --purple-dark:  #7a56a8;
 }
 
 html { scroll-behavior: smooth; }

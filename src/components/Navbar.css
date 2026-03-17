@@ -90,7 +90,9 @@
 .cart-link {
   position: relative;
   color: var(--ink) !important;
-  font-weight: 600 !important;
+  display: flex;
+  align-items: center;
+  line-height: 0;
 }
 
 .cart-badge {

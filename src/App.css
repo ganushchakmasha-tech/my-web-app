@@ -10,7 +10,7 @@
   padding: 0 2rem;
 }
 
-/* Shared buttons */
+/* ── Shared buttons ── */
 .btn-primary {
   display: inline-block;
   padding: 0.75rem 2.25rem;
@@ -23,13 +23,15 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   border: 1px solid var(--ink);
+  border-radius: 2px;
   cursor: pointer;
-  transition: background 0.25s, color 0.25s;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s;
 }
 
 .btn-primary:hover {
   background: transparent;
   color: var(--ink);
+  box-shadow: 0 2px 12px rgba(196, 145, 90, 0.18);
 }
 
 .btn-outline {
@@ -43,29 +45,38 @@
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  border: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, box-shadow 0.25s;
 }
 
-.btn-outline:hover { border-color: var(--white); }
+.btn-outline:hover {
+  border-color: var(--white);
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1);
+}
 
-/* Shared product card */
+/* ── Shared product card ── */
 .product-card {
   text-decoration: none;
   color: inherit;
   display: block;
+  transition: transform 0.3s ease;
 }
 
 .product-card img {
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 1/1;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
+  transition: transform 0.55s ease;
 }
 
-.product-card:hover img { transform: scale(1.03); }
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+.product-card:hover img { transform: scale(1.04); }
 
 .product-card-body {
   padding: 1rem 0 0;
@@ -84,6 +95,11 @@
   font-weight: 500;
   margin: 0.3rem 0 0.25rem;
   color: var(--ink);
+  transition: color 0.2s;
+}
+
+.product-card:hover .product-card-body h3 {
+  color: var(--gold);
 }
 
 .product-price {
@@ -94,6 +110,14 @@
 .product-price strong {
   color: var(--gold);
   font-weight: 500;
+}
+
+.product-price-locked {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.06em;
+  margin-top: 0.35rem;
+  font-style: italic;
 }
 
 .product-moq {

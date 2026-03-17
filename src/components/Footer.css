@@ -1,0 +1,94 @@
+.footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.6);
+  margin-top: auto;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 0 3rem;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.footer-logo .brand-b2b {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.footer-tagline {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,0.45);
+}
+
+.footer-contact-line {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.footer-contact-line a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-contact-line a:hover { color: var(--gold); }
+.footer-contact-line span { opacity: 0.3; }
+
+.footer-col h4 {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: var(--gold); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 1.25rem 0;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 768px) {
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-bottom .container { flex-direction: column; gap: 0.35rem; text-align: center; }
+}

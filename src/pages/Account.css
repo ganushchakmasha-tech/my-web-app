@@ -5,7 +5,7 @@
 
 /* Auth */
 .auth-box {
-  max-width: 420px;
+  max-width: 560px;
   margin: 0 auto;
   border: 1px solid var(--border);
   background: var(--white);
@@ -85,7 +85,56 @@
   transition: border-color 0.2s;
 }
 
-.form-group input:focus { border-color: var(--gold); }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--gold); }
+
+.form-group select,
+.form-group textarea {
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border);
+  background: var(--cream);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.88rem;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.form-group select { appearance: none; cursor: pointer; }
+.form-group textarea { resize: vertical; line-height: 1.5; }
+
+/* Application form extras */
+.apply-form { padding: 2rem 2.5rem; }
+
+.apply-section-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.apply-section-label:first-of-type { margin-top: 0.5rem; }
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.field-optional {
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink-muted);
+  opacity: 0.75;
+}
 
 .btn-auth {
   width: 100%;
@@ -124,6 +173,7 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
   padding-bottom: 2rem;
   margin-bottom: 2.5rem;
   border-bottom: 1px solid var(--border);
@@ -149,6 +199,40 @@
   font-weight: 400;
   color: var(--ink);
 }
+
+.btn-reorder {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.65rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-reorder:hover:not(:disabled) { border-color: var(--gold); color: var(--gold); }
+.btn-reorder:disabled { opacity: 0.5; cursor: default; }
+
+.btn-logout {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.45rem 1rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-logout:hover { border-color: var(--ink); color: var(--ink); }
 
 .account-header p {
   font-size: 0.78rem;

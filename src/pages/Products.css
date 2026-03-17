@@ -1,4 +1,91 @@
-.products-page { min-height: calc(100vh - 72px); }
+.products-page { min-height: calc(100vh - 72px); padding-bottom: 5rem; }
+
+/* ── Access banner ────────────────────────────────────────────── */
+.access-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.75rem;
+  background: linear-gradient(135deg, var(--ink) 0%, #261a0e 100%);
+  color: var(--white);
+}
+
+.access-banner--pending {
+  background: linear-gradient(135deg, #2a2218 0%, #1e1a14 100%);
+}
+
+.access-banner-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+.access-banner-text p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+  max-width: 480px;
+}
+
+.access-banner-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.access-btn-apply {
+  display: inline-block;
+  padding: 0.65rem 1.35rem;
+  background: var(--gold);
+  color: var(--white);
+  border: 1px solid var(--gold);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.access-btn-apply:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+.access-btn-signin {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  background: transparent;
+  color: rgba(255,255,255,0.65);
+  border: 1px solid rgba(255,255,255,0.2);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.access-btn-signin:hover {
+  border-color: rgba(255,255,255,0.5);
+  color: var(--white);
+}
+
+@media (max-width: 600px) {
+  .access-banner { flex-direction: column; align-items: flex-start; }
+  .access-banner-actions { width: 100%; }
+  .access-btn-apply, .access-btn-signin { flex: 1; text-align: center; }
+}
 
 .products-header {
   padding: 3.5rem 0 2.5rem;
@@ -69,6 +156,240 @@
   padding-left: 0.5rem;
 }
 
+.sidebar button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar-cat-name { flex: 1; text-align: left; }
+
+.sidebar-cat-min {
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.sidebar-cat-min.met { color: #7ab87a; font-weight: 600; }
+
+.cat-progress {
+  padding: 0.4rem 0.6rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cat-progress-bar {
+  height: 2px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.cat-progress-fill {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.cat-progress-label {
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.03em;
+}
+
+/* Sidebar batch count badge */
+.sidebar-batch-count {
+  font-size: 0.65rem;
+  color: var(--purple);
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.sidebar-batch-count.met { color: #7ab87a; font-weight: 600; }
+
+/* ── Ordering requirements strip ── */
+.req-rules {
+  position: relative;
+  padding: 1rem 2.5rem 1rem 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  margin-bottom: 1.25rem;
+}
+
+.req-rules-dismiss {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--ink-muted);
+  cursor: pointer;
+  padding: 0.2rem 0.3rem;
+  transition: color 0.15s;
+}
+.req-rules-dismiss:hover { color: var(--ink); }
+
+.req-rules-heading {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.75rem;
+}
+
+.req-rules-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.req-rule {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 180px;
+}
+
+.req-rule-icon {
+  font-size: 0.9rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+  line-height: 1;
+}
+
+.req-rule div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.req-rule strong {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.03em;
+}
+
+.req-rule span {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+/* Category minimum note on product card */
+.product-cat-min {
+  font-size: 0.68rem;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  margin-top: 0.15rem;
+}
+
+/* Category banner */
+.cat-banner {
+  position: relative;
+  padding: 1rem 2.5rem 1rem 1.25rem;
+  background: #fdf8f0;
+  border: 1px solid #e8c9a0;
+  margin-bottom: 1.5rem;
+}
+
+.cat-banner-dismiss {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--ink-muted);
+  cursor: pointer;
+  padding: 0.25rem 0.35rem;
+  transition: color 0.15s;
+}
+
+.cat-banner-dismiss:hover { color: var(--ink); }
+
+.cat-banner--met {
+  background: #f0faf0;
+  border-color: #b0d8b0;
+}
+
+.cat-banner-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cat-banner-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cat-banner-row--batch { padding-top: 0.75rem; border-top: 1px solid rgba(0,0,0,0.06); }
+
+.cat-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cat-banner-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.cat-banner-row--batch .cat-banner-label { color: var(--purple-dark); }
+.cat-banner--met .cat-banner-label { color: #6a9e6a; }
+
+.cat-banner-desc {
+  font-size: 0.82rem;
+  color: var(--ink-light);
+}
+
+.cat-banner-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  flex-shrink: 0;
+  min-width: 180px;
+}
+
+.cat-banner-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.cat-banner-fill {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.cat-banner-progress span {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.04em;
+}
+
 /* Toolbar */
 .products-toolbar {
   display: flex;
@@ -105,9 +426,24 @@
 }
 
 .product-img-wrap {
+  position: relative;
   overflow: hidden;
   background: var(--surface);
 }
+
+.card-stock-badge {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+}
+
+.card-stock--low { background: #fdf3e0; color: #8a6a00; }
+.card-stock--out { background: #fdf0f0; color: #a03030; }
 
 .tier-preview {
   display: flex;
@@ -139,6 +475,12 @@
   .sidebar { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .sidebar h3 { width: 100%; }
   .sidebar ul { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-  .sidebar button { padding: 0.35rem 0.75rem; border: 1px solid var(--border); }
+  .sidebar button {
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--border);
+    min-height: 44px;
+    min-width: 44px;
+  }
   .sidebar button.active { border-color: var(--gold); border-left: 1px solid var(--gold); }
+  .products-toolbar select { min-height: 44px; padding: 0.5rem 0.75rem; }
 }
